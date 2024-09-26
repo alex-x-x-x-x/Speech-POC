@@ -16,11 +16,12 @@ struct ContentView: View {
                 .frame(height: 20)
                 .padding(.horizontal)
             
-            
             Button(action: {
                 viewModel.toggleRecording()
             }) {
                 Text(viewModel.isRecording ? "Stop Recording" : "Start Recording")
+                    .font(.body)
+                    .frame(width: 200, height: 5)
                     .padding()
                     .foregroundColor(.white)
                     .background(viewModel.isRecording ? Color.red : Color.blue)
@@ -35,7 +36,6 @@ struct ContentView: View {
                     .cornerRadius(10)
             }
             .padding()
-            
             Spacer()
         }
         .padding()

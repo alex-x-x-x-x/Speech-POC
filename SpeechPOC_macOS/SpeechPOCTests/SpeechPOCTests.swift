@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import SpeechPOC
+@testable import SpeechPOC_macOS
 
 final class SpeechPOCTests: XCTestCase {
 
