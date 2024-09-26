@@ -1,0 +1,620 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		74E684B62CA4DA5B00803277 /* SpeechPOCApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E684B52CA4DA5B00803277 /* SpeechPOCApp.swift */; };
+		74E684B82CA4DA5B00803277 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E684B72CA4DA5B00803277 /* ContentView.swift */; };
+		74E684BA2CA4DA5C00803277 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74E684B92CA4DA5C00803277 /* Assets.xcassets */; };
+		74E684BD2CA4DA5C00803277 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74E684BC2CA4DA5C00803277 /* Preview Assets.xcassets */; };
+		74E684C82CA4DA5C00803277 /* SpeechPOCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E684C72CA4DA5C00803277 /* SpeechPOCTests.swift */; };
+		74E684D22CA4DA5C00803277 /* SpeechPOCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E684D12CA4DA5C00803277 /* SpeechPOCUITests.swift */; };
+		74E684D42CA4DA5C00803277 /* SpeechPOCUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E684D32CA4DA5C00803277 /* SpeechPOCUITestsLaunchTests.swift */; };
+		74E684E62CA4DC3500803277 /* SpeechRecognizerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E684E52CA4DC3500803277 /* SpeechRecognizerViewModel.swift */; };
+		74E684EA2CA4DFB700803277 /* MicrophoneLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E684E92CA4DFB700803277 /* MicrophoneLevelView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		74E684C42CA4DA5C00803277 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 74E684AA2CA4DA5B00803277 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 74E684B12CA4DA5B00803277;
+			remoteInfo = SpeechPOC;
+		};
+		74E684CE2CA4DA5C00803277 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 74E684AA2CA4DA5B00803277 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 74E684B12CA4DA5B00803277;
+			remoteInfo = SpeechPOC;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		74E684B22CA4DA5B00803277 /* SpeechPOC_macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeechPOC_macOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		74E684B52CA4DA5B00803277 /* SpeechPOCApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechPOCApp.swift; sourceTree = "<group>"; };
+		74E684B72CA4DA5B00803277 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		74E684B92CA4DA5C00803277 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		74E684BC2CA4DA5C00803277 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		74E684BE2CA4DA5C00803277 /* SpeechPOC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SpeechPOC.entitlements; sourceTree = "<group>"; };
+		74E684C32CA4DA5C00803277 /* SpeechPOC_macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpeechPOC_macOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		74E684C72CA4DA5C00803277 /* SpeechPOCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechPOCTests.swift; sourceTree = "<group>"; };
+		74E684CD2CA4DA5C00803277 /* SpeechPOC_macOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpeechPOC_macOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		74E684D12CA4DA5C00803277 /* SpeechPOCUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechPOCUITests.swift; sourceTree = "<group>"; };
+		74E684D32CA4DA5C00803277 /* SpeechPOCUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechPOCUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		74E684E52CA4DC3500803277 /* SpeechRecognizerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizerViewModel.swift; sourceTree = "<group>"; };
+		74E684E92CA4DFB700803277 /* MicrophoneLevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicrophoneLevelView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		74E684AF2CA4DA5B00803277 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74E684C02CA4DA5C00803277 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74E684CA2CA4DA5C00803277 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		74E684A92CA4DA5B00803277 = {
+			isa = PBXGroup;
+			children = (
+				74E684B42CA4DA5B00803277 /* SpeechPOC */,
+				74E684C62CA4DA5C00803277 /* SpeechPOCTests */,
+				74E684D02CA4DA5C00803277 /* SpeechPOCUITests */,
+				74E684B32CA4DA5B00803277 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		74E684B32CA4DA5B00803277 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				74E684B22CA4DA5B00803277 /* SpeechPOC_macOS.app */,
+				74E684C32CA4DA5C00803277 /* SpeechPOC_macOSTests.xctest */,
+				74E684CD2CA4DA5C00803277 /* SpeechPOC_macOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		74E684B42CA4DA5B00803277 /* SpeechPOC */ = {
+			isa = PBXGroup;
+			children = (
+				74E684B52CA4DA5B00803277 /* SpeechPOCApp.swift */,
+				74E684E32CA4DBDD00803277 /* View */,
+				74E684E42CA4DC0000803277 /* ViewModel */,
+				74E684B92CA4DA5C00803277 /* Assets.xcassets */,
+				74E684BE2CA4DA5C00803277 /* SpeechPOC.entitlements */,
+				74E684BB2CA4DA5C00803277 /* Preview Content */,
+			);
+			path = SpeechPOC;
+			sourceTree = "<group>";
+		};
+		74E684BB2CA4DA5C00803277 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				74E684BC2CA4DA5C00803277 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		74E684C62CA4DA5C00803277 /* SpeechPOCTests */ = {
+			isa = PBXGroup;
+			children = (
+				74E684C72CA4DA5C00803277 /* SpeechPOCTests.swift */,
+			);
+			path = SpeechPOCTests;
+			sourceTree = "<group>";
+		};
+		74E684D02CA4DA5C00803277 /* SpeechPOCUITests */ = {
+			isa = PBXGroup;
+			children = (
+				74E684D12CA4DA5C00803277 /* SpeechPOCUITests.swift */,
+				74E684D32CA4DA5C00803277 /* SpeechPOCUITestsLaunchTests.swift */,
+			);
+			path = SpeechPOCUITests;
+			sourceTree = "<group>";
+		};
+		74E684E32CA4DBDD00803277 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				74E684B72CA4DA5B00803277 /* ContentView.swift */,
+				74E684E92CA4DFB700803277 /* MicrophoneLevelView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		74E684E42CA4DC0000803277 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				74E684E52CA4DC3500803277 /* SpeechRecognizerViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		74E684B12CA4DA5B00803277 /* SpeechPOC_macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74E684D72CA4DA5C00803277 /* Build configuration list for PBXNativeTarget "SpeechPOC_macOS" */;
+			buildPhases = (
+				74E684AE2CA4DA5B00803277 /* Sources */,
+				74E684AF2CA4DA5B00803277 /* Frameworks */,
+				74E684B02CA4DA5B00803277 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpeechPOC_macOS;
+			productName = SpeechPOC;
+			productReference = 74E684B22CA4DA5B00803277 /* SpeechPOC_macOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		74E684C22CA4DA5C00803277 /* SpeechPOC_macOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74E684DA2CA4DA5C00803277 /* Build configuration list for PBXNativeTarget "SpeechPOC_macOSTests" */;
+			buildPhases = (
+				74E684BF2CA4DA5C00803277 /* Sources */,
+				74E684C02CA4DA5C00803277 /* Frameworks */,
+				74E684C12CA4DA5C00803277 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				74E684C52CA4DA5C00803277 /* PBXTargetDependency */,
+			);
+			name = SpeechPOC_macOSTests;
+			productName = SpeechPOCTests;
+			productReference = 74E684C32CA4DA5C00803277 /* SpeechPOC_macOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		74E684CC2CA4DA5C00803277 /* SpeechPOC_macOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74E684DD2CA4DA5C00803277 /* Build configuration list for PBXNativeTarget "SpeechPOC_macOSUITests" */;
+			buildPhases = (
+				74E684C92CA4DA5C00803277 /* Sources */,
+				74E684CA2CA4DA5C00803277 /* Frameworks */,
+				74E684CB2CA4DA5C00803277 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				74E684CF2CA4DA5C00803277 /* PBXTargetDependency */,
+			);
+			name = SpeechPOC_macOSUITests;
+			productName = SpeechPOCUITests;
+			productReference = 74E684CD2CA4DA5C00803277 /* SpeechPOC_macOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		74E684AA2CA4DA5B00803277 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					74E684B12CA4DA5B00803277 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					74E684C22CA4DA5C00803277 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 74E684B12CA4DA5B00803277;
+					};
+					74E684CC2CA4DA5C00803277 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 74E684B12CA4DA5B00803277;
+					};
+				};
+			};
+			buildConfigurationList = 74E684AD2CA4DA5B00803277 /* Build configuration list for PBXProject "SpeechPOC_macOS" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 74E684A92CA4DA5B00803277;
+			productRefGroup = 74E684B32CA4DA5B00803277 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				74E684B12CA4DA5B00803277 /* SpeechPOC_macOS */,
+				74E684C22CA4DA5C00803277 /* SpeechPOC_macOSTests */,
+				74E684CC2CA4DA5C00803277 /* SpeechPOC_macOSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		74E684B02CA4DA5B00803277 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74E684BD2CA4DA5C00803277 /* Preview Assets.xcassets in Resources */,
+				74E684BA2CA4DA5C00803277 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74E684C12CA4DA5C00803277 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74E684CB2CA4DA5C00803277 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		74E684AE2CA4DA5B00803277 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74E684B82CA4DA5B00803277 /* ContentView.swift in Sources */,
+				74E684B62CA4DA5B00803277 /* SpeechPOCApp.swift in Sources */,
+				74E684E62CA4DC3500803277 /* SpeechRecognizerViewModel.swift in Sources */,
+				74E684EA2CA4DFB700803277 /* MicrophoneLevelView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74E684BF2CA4DA5C00803277 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74E684C82CA4DA5C00803277 /* SpeechPOCTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74E684C92CA4DA5C00803277 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74E684D22CA4DA5C00803277 /* SpeechPOCUITests.swift in Sources */,
+				74E684D42CA4DA5C00803277 /* SpeechPOCUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		74E684C52CA4DA5C00803277 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 74E684B12CA4DA5B00803277 /* SpeechPOC_macOS */;
+			targetProxy = 74E684C42CA4DA5C00803277 /* PBXContainerItemProxy */;
+		};
+		74E684CF2CA4DA5C00803277 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 74E684B12CA4DA5B00803277 /* SpeechPOC_macOS */;
+			targetProxy = 74E684CE2CA4DA5C00803277 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		74E684D52CA4DA5C00803277 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		74E684D62CA4DA5C00803277 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		74E684D82CA4DA5C00803277 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SpeechPOC/SpeechPOC.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SpeechPOC/Preview Content\"";
+				DEVELOPMENT_TEAM = 7LMYC4WX47;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SpeechPOC/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SpeechPOC;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app needs the microphone to record audio";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "This app needs access to speech recognition to transcribe audio to text.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Alex-Lifa.SpeechPOC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		74E684D92CA4DA5C00803277 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SpeechPOC/SpeechPOC.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SpeechPOC/Preview Content\"";
+				DEVELOPMENT_TEAM = 7LMYC4WX47;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SpeechPOC/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SpeechPOC;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app needs the microphone to record audio";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "This app needs access to speech recognition to transcribe audio to text.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Alex-Lifa.SpeechPOC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		74E684DB2CA4DA5C00803277 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7LMYC4WX47;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Alex-Lifa.SpeechPOCTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpeechPOC_macOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SpeechPOC_macOS";
+			};
+			name = Debug;
+		};
+		74E684DC2CA4DA5C00803277 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7LMYC4WX47;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Alex-Lifa.SpeechPOCTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpeechPOC_macOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SpeechPOC_macOS";
+			};
+			name = Release;
+		};
+		74E684DE2CA4DA5C00803277 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7LMYC4WX47;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Alex-Lifa.SpeechPOCUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = SpeechPOC;
+			};
+			name = Debug;
+		};
+		74E684DF2CA4DA5C00803277 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7LMYC4WX47;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Alex-Lifa.SpeechPOCUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = SpeechPOC;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		74E684AD2CA4DA5B00803277 /* Build configuration list for PBXProject "SpeechPOC_macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74E684D52CA4DA5C00803277 /* Debug */,
+				74E684D62CA4DA5C00803277 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74E684D72CA4DA5C00803277 /* Build configuration list for PBXNativeTarget "SpeechPOC_macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74E684D82CA4DA5C00803277 /* Debug */,
+				74E684D92CA4DA5C00803277 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74E684DA2CA4DA5C00803277 /* Build configuration list for PBXNativeTarget "SpeechPOC_macOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74E684DB2CA4DA5C00803277 /* Debug */,
+				74E684DC2CA4DA5C00803277 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74E684DD2CA4DA5C00803277 /* Build configuration list for PBXNativeTarget "SpeechPOC_macOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74E684DE2CA4DA5C00803277 /* Debug */,
+				74E684DF2CA4DA5C00803277 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 74E684AA2CA4DA5B00803277 /* Project object */;
+}
