@@ -30,6 +30,7 @@ struct ContentView: View {
             
             ScrollView {
                 Text(viewModel.transcribedText)
+                    .font(.caption)
                     .padding()
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .background(Color.gray.opacity(0.2))
