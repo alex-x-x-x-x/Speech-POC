@@ -8,16 +8,19 @@
 import AVFoundation
 import Speech
 
-class SpeechRecognizerViewModel: ObservableObject {
+final class SpeechRecognizerViewModel: ObservableObject {
     @Published var isRecording = false
     @Published var transcribedText = ""
     @Published var audioLevel: Float = 0.0
+    @Published var audioSamples: [Float] = []
 
     private var audioEngine = AVAudioEngine()
     private var speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "en-US"))
     private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
     private var recognitionTask: SFSpeechRecognitionTask?
     
+    private let sampleCount = 50
+
     init() {
         requestSpeechRecognitionAccess()
         requestMicrophoneAccess()
@@ -126,11 +129,13 @@ class SpeechRecognizerViewModel: ObservableObject {
         let avgPower = 20 * log10(rms)
         
         DispatchQueue.main.async {
-            self.audioLevel = avgPower
+            self.audioLevel = (avgPower + 160) / 160
+        //TODO: Use for debugging to tweak/fix animation detecting audioLevel
+        // print("Audio Level: \(self.audioLevel)")
         }
     }
     
-    // MARK: - SpeechRecognition and Microphone (system level permissions)
+    // MARK: - SpeechRecognition and Microphone permissions
     
     fileprivate func requestSpeechRecognitionAccess() {
         SFSpeechRecognizer.requestAuthorization { authStatus in

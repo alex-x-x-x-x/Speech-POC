@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		744749D82CA5B7F8009F46C4 /* CircularAudioVisualizerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744749D72CA5B7F8009F46C4 /* CircularAudioVisualizerView.swift */; };
 		74E684B62CA4DA5B00803277 /* SpeechPOCApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E684B52CA4DA5B00803277 /* SpeechPOCApp.swift */; };
 		74E684B82CA4DA5B00803277 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E684B72CA4DA5B00803277 /* ContentView.swift */; };
 		74E684BA2CA4DA5C00803277 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74E684B92CA4DA5C00803277 /* Assets.xcassets */; };
@@ -15,7 +16,6 @@
 		74E684D22CA4DA5C00803277 /* SpeechPOCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E684D12CA4DA5C00803277 /* SpeechPOCUITests.swift */; };
 		74E684D42CA4DA5C00803277 /* SpeechPOCUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E684D32CA4DA5C00803277 /* SpeechPOCUITestsLaunchTests.swift */; };
 		74E684E62CA4DC3500803277 /* SpeechRecognizerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E684E52CA4DC3500803277 /* SpeechRecognizerViewModel.swift */; };
-		74E684EA2CA4DFB700803277 /* MicrophoneLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E684E92CA4DFB700803277 /* MicrophoneLevelView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		744749D72CA5B7F8009F46C4 /* CircularAudioVisualizerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularAudioVisualizerView.swift; sourceTree = "<group>"; };
 		74E684B22CA4DA5B00803277 /* SpeechPOC_macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeechPOC_macOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74E684B52CA4DA5B00803277 /* SpeechPOCApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechPOCApp.swift; sourceTree = "<group>"; };
 		74E684B72CA4DA5B00803277 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -48,7 +49,6 @@
 		74E684D12CA4DA5C00803277 /* SpeechPOCUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechPOCUITests.swift; sourceTree = "<group>"; };
 		74E684D32CA4DA5C00803277 /* SpeechPOCUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechPOCUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		74E684E52CA4DC3500803277 /* SpeechRecognizerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizerViewModel.swift; sourceTree = "<group>"; };
-		74E684E92CA4DFB700803277 /* MicrophoneLevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicrophoneLevelView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,7 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				74E684B72CA4DA5B00803277 /* ContentView.swift */,
-				74E684E92CA4DFB700803277 /* MicrophoneLevelView.swift */,
+				744749D72CA5B7F8009F46C4 /* CircularAudioVisualizerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -215,7 +215,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1540;
-				LastUpgradeCheck = 1540;
+				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					74E684B12CA4DA5B00803277 = {
 						CreatedOnToolsVersion = 15.4;
@@ -284,7 +284,7 @@
 				74E684B82CA4DA5B00803277 /* ContentView.swift in Sources */,
 				74E684B62CA4DA5B00803277 /* SpeechPOCApp.swift in Sources */,
 				74E684E62CA4DC3500803277 /* SpeechRecognizerViewModel.swift in Sources */,
-				74E684EA2CA4DFB700803277 /* MicrophoneLevelView.swift in Sources */,
+				744749D82CA5B7F8009F46C4 /* CircularAudioVisualizerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,6 +355,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -418,6 +419,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -448,6 +450,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"SpeechPOC/Preview Content\"";
 				DEVELOPMENT_TEAM = 7LMYC4WX47;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -480,6 +483,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"SpeechPOC/Preview Content\"";
 				DEVELOPMENT_TEAM = 7LMYC4WX47;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -506,10 +510,10 @@
 		74E684DB2CA4DA5C00803277 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 7LMYC4WX47;
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
@@ -525,10 +529,10 @@
 		74E684DC2CA4DA5C00803277 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 7LMYC4WX47;
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
@@ -544,9 +548,9 @@
 		74E684DE2CA4DA5C00803277 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 7LMYC4WX47;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
@@ -561,9 +565,9 @@
 		74E684DF2CA4DA5C00803277 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 7LMYC4WX47;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
