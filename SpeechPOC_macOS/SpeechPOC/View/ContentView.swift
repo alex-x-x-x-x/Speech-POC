@@ -8,48 +8,32 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject private var viewModel = SpeechRecognizerViewModel()
+    @StateObject private var speechRecognizerViewModel = SpeechRecognizerViewModel()
+    @StateObject private var microphoneViewModel = MicrophoneInputViewModel()
     
     var body: some View {
         VStack(spacing: 20) {
             ZStack {
-                CircularAudioVisualizerView(audioLevel: viewModel.audioLevel, maxCircleSize: 80)
+                CircularAudioVisualizerView(audioLevel: speechRecognizerViewModel.audioLevel, maxCircleSize: 80)
                     .frame(width: 150, height: 150)
-                Button(action: {
-                    viewModel.toggleRecording()
-                }) {
-                    Image(systemName: viewModel.isRecording ? "mic.fill" : "mic.slash.fill")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 50, height: 50)
-                        .padding()
-                        .foregroundColor(.white)
-                        .background(viewModel.isRecording ? Color.red : Color.green)
-                        .clipShape(Circle())
-                        .overlay(
-                            Circle()
-                                .stroke(viewModel.isRecording ? Color.red : Color.green, lineWidth: 4)
-                        )
-                        .shadow(radius: 10)
-                }
-                .buttonStyle(PlainButtonStyle())
+                
+                RecordingButtonView(
+                    isRecording: speechRecognizerViewModel.isRecording,
+                    action: {
+                        speechRecognizerViewModel.toggleRecording()
+                    }
+                )
             }
             .frame(width: 250, height: 250)
-
-            ScrollView {
-                Text(viewModel.transcribedText.isEmpty ? "Start speaking to see transcription, verify that your microphone is enabled. Press the button to start recording." : viewModel.transcribedText)
-                    .font(.caption)
-                    .padding()
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .background(Color.gray.opacity(0.2))
-                    .cornerRadius(10)
-                    .layoutPriority(1)
-            }
-            .padding()
-            .frame(maxHeight: 150)
+            
+            TranscribedTextView(transcribedText: speechRecognizerViewModel.transcribedText)
+            
             Spacer()
         }
         .padding()
+        .overlay(InputDeviceInfoView(inputSource: microphoneViewModel.currentInputSource)
+                .environmentObject(microphoneViewModel),
+                 alignment: .topTrailing)
     }
 }
 
@@ -57,6 +41,10 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .previewLayout(.fixed(width: 800, height: 600))
+            .environmentObject(SpeechRecognizerViewModel())
+            .environmentObject(MicrophoneInputViewModel())
     }
 }
 #endif

@@ -30,13 +30,33 @@ final class SpeechRecognizerViewModel: ObservableObject {
         if isRecording {
             stopRecording()
         } else {
-            startRecording()
+            checkPermissionsAndStartRecording()
+        }
+    }
+
+    private func checkPermissionsAndStartRecording() {
+        SFSpeechRecognizer.requestAuthorization { authStatus in
+            switch authStatus {
+            case .authorized:
+                AVCaptureDevice.requestAccess(for: .audio) { granted in
+                    if granted {
+                        DispatchQueue.main.async {
+                            self.startRecording()
+                        }
+                    } else {
+                        print("Microphone access denied")
+                    }
+                }
+            default:
+                print("Speech recognition not authorized")
+            }
         }
     }
     
     // MARK: - Start/stop recording
 
     private func startRecording() {
+        guard !audioEngine.isRunning else { return }
         resetRecognitionTaskIfNeeded()
         createRecognitionRequest()
         setupRecognitionTask()
@@ -48,6 +68,7 @@ final class SpeechRecognizerViewModel: ObservableObject {
         audioEngine.stop()
         audioEngine.inputNode.removeTap(onBus: 0)
         recognitionRequest?.endAudio()
+        recognitionTask?.cancel()
         isRecording = false
     }
     
@@ -74,40 +95,38 @@ final class SpeechRecognizerViewModel: ObservableObject {
         guard let recognitionRequest = recognitionRequest else { return }
 
         recognitionTask = speechRecognizer?.recognitionTask(with: recognitionRequest) { result, error in
-            self.handleRecognitionResult(result, error: error)
-        }
-    }
-
-    private func handleRecognitionResult(_ result: SFSpeechRecognitionResult?, error: Error?) {
-        if let result = result {
-            DispatchQueue.main.async {
-                self.transcribedText = result.bestTranscription.formattedString
+            if let result = result {
+                DispatchQueue.main.async {
+                    self.transcribedText = result.bestTranscription.formattedString
+                }
+            }
+            
+            if error != nil || result?.isFinal == true {
+                self.stopAudioEngine()
             }
         }
-        
-        if error != nil || result?.isFinal == true {
-            stopAudioEngine()
-        }
     }
 
-    // MARK: - Start/stop audio engine
+    // MARK: - Audio engine control (configures the audio engine with hardware format and starts capturing audio)
 
     private func startAudioEngine() {
         let inputNode = audioEngine.inputNode
-        let recordingFormat = inputNode.outputFormat(forBus: 0)
-        inputNode.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { buffer, when in
+        let hwFormat = inputNode.inputFormat(forBus: 0)
+        
+        inputNode.removeTap(onBus: 0)
+        inputNode.installTap(onBus: 0, bufferSize: 1024, format: hwFormat) { buffer, when in
             self.recognitionRequest?.append(buffer)
             self.detectAudioLevel(buffer: buffer)
         }
         
-        audioEngine.prepare()
-        
         do {
             try audioEngine.start()
         } catch {
-            print("Audio engine couldn't start because of an error: \(error.localizedDescription)")
+            audioEngine.stop()
+            audioEngine.reset()
         }
     }
+
 
     private func stopAudioEngine() {
         audioEngine.stop()
@@ -116,7 +135,7 @@ final class SpeechRecognizerViewModel: ObservableObject {
         recognitionTask = nil
     }
 
-    // MARK: - Detect audio level
+    // MARK: - Audio Level Detection
 
     private func detectAudioLevel(buffer: AVAudioPCMBuffer) {
         guard let channelData = buffer.floatChannelData else { return }
@@ -130,20 +149,18 @@ final class SpeechRecognizerViewModel: ObservableObject {
         
         DispatchQueue.main.async {
             self.audioLevel = (avgPower + 160) / 160
-        //TODO: Use for debugging to tweak/fix animation detecting audioLevel
-        // print("Audio Level: \(self.audioLevel)")
         }
     }
     
-    // MARK: - SpeechRecognition and Microphone permissions
-    
+    // MARK: - Permission requests
+
     fileprivate func requestSpeechRecognitionAccess() {
         SFSpeechRecognizer.requestAuthorization { authStatus in
             switch authStatus {
             case .authorized:
-                print("Speech recognition authorized")
+                self.startAudioEngine()
             case .denied, .restricted, .notDetermined:
-                print("Speech recognition not authorized")
+                self.stopAudioEngine()
             @unknown default:
                 fatalError("Unknown authorization status")
             }
@@ -153,9 +170,9 @@ final class SpeechRecognizerViewModel: ObservableObject {
     fileprivate func requestMicrophoneAccess() {
         AVCaptureDevice.requestAccess(for: .audio) { granted in
             if granted {
-                print("Microphone access granted")
+                self.startRecording()
             } else {
-                print("Microphone access denied")
+                self.stopRecording()
             }
         }
     }

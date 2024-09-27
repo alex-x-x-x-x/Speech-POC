@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		744749D82CA5B7F8009F46C4 /* CircularAudioVisualizerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744749D72CA5B7F8009F46C4 /* CircularAudioVisualizerView.swift */; };
+		744749DD2CA5D60E009F46C4 /* MicrophoneInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744749DC2CA5D60E009F46C4 /* MicrophoneInputViewModel.swift */; };
+		744749DF2CA5DCDA009F46C4 /* InputDeviceInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744749DE2CA5DCDA009F46C4 /* InputDeviceInfoView.swift */; };
+		744749E12CA5DDAA009F46C4 /* RecordingButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744749E02CA5DDAA009F46C4 /* RecordingButtonView.swift */; };
+		744749E32CA5DE31009F46C4 /* TranscribedTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744749E22CA5DE31009F46C4 /* TranscribedTextView.swift */; };
+		744749E72CA629E8009F46C4 /* GradientConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744749E62CA629E8009F46C4 /* GradientConfiguration.swift */; };
 		74E684B62CA4DA5B00803277 /* SpeechPOCApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E684B52CA4DA5B00803277 /* SpeechPOCApp.swift */; };
 		74E684B82CA4DA5B00803277 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E684B72CA4DA5B00803277 /* ContentView.swift */; };
 		74E684BA2CA4DA5C00803277 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74E684B92CA4DA5C00803277 /* Assets.xcassets */; };
@@ -37,6 +42,11 @@
 
 /* Begin PBXFileReference section */
 		744749D72CA5B7F8009F46C4 /* CircularAudioVisualizerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularAudioVisualizerView.swift; sourceTree = "<group>"; };
+		744749DC2CA5D60E009F46C4 /* MicrophoneInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicrophoneInputViewModel.swift; sourceTree = "<group>"; };
+		744749DE2CA5DCDA009F46C4 /* InputDeviceInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputDeviceInfoView.swift; sourceTree = "<group>"; };
+		744749E02CA5DDAA009F46C4 /* RecordingButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingButtonView.swift; sourceTree = "<group>"; };
+		744749E22CA5DE31009F46C4 /* TranscribedTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscribedTextView.swift; sourceTree = "<group>"; };
+		744749E62CA629E8009F46C4 /* GradientConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientConfiguration.swift; sourceTree = "<group>"; };
 		74E684B22CA4DA5B00803277 /* SpeechPOC_macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeechPOC_macOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74E684B52CA4DA5B00803277 /* SpeechPOCApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechPOCApp.swift; sourceTree = "<group>"; };
 		74E684B72CA4DA5B00803277 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -76,6 +86,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		744749E42CA5E1EC009F46C4 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				744749D72CA5B7F8009F46C4 /* CircularAudioVisualizerView.swift */,
+				744749DE2CA5DCDA009F46C4 /* InputDeviceInfoView.swift */,
+				744749E22CA5DE31009F46C4 /* TranscribedTextView.swift */,
+				744749E02CA5DDAA009F46C4 /* RecordingButtonView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		744749E52CA629C4009F46C4 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				744749E62CA629E8009F46C4 /* GradientConfiguration.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		744749EE2CA6351E009F46C4 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				744749E52CA629C4009F46C4 /* Colors */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		74E684A92CA4DA5B00803277 = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +139,8 @@
 				74E684B52CA4DA5B00803277 /* SpeechPOCApp.swift */,
 				74E684E32CA4DBDD00803277 /* View */,
 				74E684E42CA4DC0000803277 /* ViewModel */,
+				744749E42CA5E1EC009F46C4 /* Components */,
+				744749EE2CA6351E009F46C4 /* Utilities */,
 				74E684B92CA4DA5C00803277 /* Assets.xcassets */,
 				74E684BE2CA4DA5C00803277 /* SpeechPOC.entitlements */,
 				74E684BB2CA4DA5C00803277 /* Preview Content */,
@@ -128,8 +167,8 @@
 		74E684D02CA4DA5C00803277 /* SpeechPOCUITests */ = {
 			isa = PBXGroup;
 			children = (
-				74E684D12CA4DA5C00803277 /* SpeechPOCUITests.swift */,
 				74E684D32CA4DA5C00803277 /* SpeechPOCUITestsLaunchTests.swift */,
+				74E684D12CA4DA5C00803277 /* SpeechPOCUITests.swift */,
 			);
 			path = SpeechPOCUITests;
 			sourceTree = "<group>";
@@ -138,7 +177,6 @@
 			isa = PBXGroup;
 			children = (
 				74E684B72CA4DA5B00803277 /* ContentView.swift */,
-				744749D72CA5B7F8009F46C4 /* CircularAudioVisualizerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -147,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				74E684E52CA4DC3500803277 /* SpeechRecognizerViewModel.swift */,
+				744749DC2CA5D60E009F46C4 /* MicrophoneInputViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -282,9 +321,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				74E684B82CA4DA5B00803277 /* ContentView.swift in Sources */,
+				744749E72CA629E8009F46C4 /* GradientConfiguration.swift in Sources */,
 				74E684B62CA4DA5B00803277 /* SpeechPOCApp.swift in Sources */,
+				744749DD2CA5D60E009F46C4 /* MicrophoneInputViewModel.swift in Sources */,
 				74E684E62CA4DC3500803277 /* SpeechRecognizerViewModel.swift in Sources */,
+				744749E12CA5DDAA009F46C4 /* RecordingButtonView.swift in Sources */,
+				744749E32CA5DE31009F46C4 /* TranscribedTextView.swift in Sources */,
 				744749D82CA5B7F8009F46C4 /* CircularAudioVisualizerView.swift in Sources */,
+				744749DF2CA5DCDA009F46C4 /* InputDeviceInfoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
