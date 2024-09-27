@@ -4,10 +4,8 @@ Quick and dirty proof of concept for macOS demonstrating real-time speech recogn
 
 ## Demo
 
-
-![github_gif](https://github.com/user-attachments/assets/00090bf9-1bee-41eb-b665-967bfa6ee6cb)
-
+![POC_gif](https://github.com/user-attachments/assets/2391fbee-9cf6-427d-aa24-58b78fffffb9)
 
 ### TODO:
 - [ ] Performance tweaks with `AVAudioEngine`
-- [ ] UI tweaks
+- [x] UI tweaks
