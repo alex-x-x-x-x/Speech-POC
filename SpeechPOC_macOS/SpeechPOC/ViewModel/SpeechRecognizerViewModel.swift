@@ -61,9 +61,12 @@ final class SpeechRecognizerViewModel: ObservableObject {
         createRecognitionRequest()
         setupRecognitionTask()
         startAudioEngine()
-        isRecording = true
+
+        DispatchQueue.main.async {
+            self.isRecording = true
+        }
     }
-    
+
     private func stopRecording() {
         audioEngine.stop()
         audioEngine.inputNode.removeTap(onBus: 0)
