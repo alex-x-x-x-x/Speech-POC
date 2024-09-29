@@ -7,7 +7,7 @@ Utilizing Apple's [**Speech**](https://developer.apple.com/documentation/speech/
 
 The goal of this R&D effort was to investigate the potential for building intuitive and responsive voice-driven applications that leveraging built-in macOS technologies. The findings from this project can serve as a foundation for more complex applications, such as automated transcription services, or accessibility tools. 
 
-Further development could explore enhancements like improved contextual understanding and tagging.
+Further development could explore enhancements like improved contextual understanding in tagging.
 
 # Features
 * **Real-Time Speech Recognition**:
