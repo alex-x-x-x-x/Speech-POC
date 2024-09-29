@@ -17,28 +17,16 @@ Further development could explore enhancements like improved contextual understa
 * **Transcription Management**:
     * Save, edit, and delete transcriptions from a split view interface
 
-# Prerequisites 
+# Prerequisites & Installation
 * macOS Sequoia 15.0 or later
 * Xcode 16+
-
-# Installation
-1. Clone the repository
-   ```
-   git clone https//:github.com/alex-x-x-x/SpeechPOCApp.git
-   cd SpeechPOCApp
-   ```
-2. Open the project in Xcode
-   ```
-   open SpeechPOCApp.xcodeproj
-   ```
-3. Build and run the application using Xcode
-
+* Clone, open and build the project in Xcode
 
 # Usage
 
 ### Recording Audio
-1. Click the microphone button to start/stop recording. The visualizer will display the audio levels in real-time.
-2. Click the **Save** button below the transcribed tet. This will save the transcription to the list of recordings.
+1. Click the microphone button to start/stop recording; the visualizer will display the audio levels in real-time.
+2. Click the **Save** button below the transcribed text; this will save the transcription to the list of recordings.
 3. After saving, the app will switch to the split view, where you can edit your transcription and tags.
 
 ### Managing Transcriptions
