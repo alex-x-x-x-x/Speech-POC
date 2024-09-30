@@ -5,7 +5,7 @@ This project was developed as a proof of concept to explore the capabilities of 
 
 Utilizing Apple's [**Speech**](https://developer.apple.com/documentation/speech/) framework, it captures and transcribes spoken input in real-time. Additionally, the integration of the [**Natural Language**](https://developer.apple.com/documentation/naturallanguage/) framework allows for tagging and semantic analysis of the transcriptions, enabling more nuanced and meaningful data extraction. 
 
-The goal of this R&D effort was to investigate the potential for building intuitive and responsive voice-driven applications that leveraging built-in macOS technologies. The findings from this project can serve as a foundation for more complex applications, such as automated transcription services, or accessibility tools. 
+The goal of this R&D effort was to investigate the potential for building intuitive and responsive voice-driven applications that leverage built-in macOS technologies. The findings from this project can serve as a foundation for more complex applications, such as automated transcription services, or accessibility tools. 
 
 Further development could explore enhancements like improved contextual understanding in tagging.
 
@@ -35,6 +35,7 @@ Further development could explore enhancements like improved contextual understa
 3. You can edit the transcription title, content, and tags. Click the **Save** button to update the transcription.
 4. To delete a transcription, click on the trash icon in the toolbar.
 
-# Known Issues
-* When there is no audio input device connected, the app may not function as expected (you can obviously use your built-in microphone on your macOS machine but if you're using a Mac mini, for example, I highly recommend connecting using your AirPods or some other input source).
+> [!WARNING]
+> 
+> When there is no audio input device connected, the app may not function as expected (you can obviously use your built-in microphone on your macOS machine but if you're using a Mac mini, for example, I highly recommend connecting using your AirPods or some other input source).
 
