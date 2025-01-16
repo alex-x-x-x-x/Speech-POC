@@ -21,6 +21,7 @@
 		74CB4E6F2CA7139B00983594 /* TranscriptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CB4E6E2CA7139B00983594 /* TranscriptionViewModel.swift */; };
 		74CB4E712CA7181B00983594 /* SaveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CB4E702CA7181B00983594 /* SaveButton.swift */; };
 		74CB4E732CA7187F00983594 /* ActionButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CB4E722CA7187F00983594 /* ActionButtonStyle.swift */; };
+		74E53ABF2D38972C002FD8F6 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E53ABE2D38972C002FD8F6 /* BackButton.swift */; };
 		74E684B62CA4DA5B00803277 /* SpeechPOCApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E684B52CA4DA5B00803277 /* SpeechPOCApp.swift */; };
 		74E684B82CA4DA5B00803277 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E684B72CA4DA5B00803277 /* ContentView.swift */; };
 		74E684BA2CA4DA5C00803277 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74E684B92CA4DA5C00803277 /* Assets.xcassets */; };
@@ -63,6 +64,7 @@
 		74CB4E6E2CA7139B00983594 /* TranscriptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriptionViewModel.swift; sourceTree = "<group>"; };
 		74CB4E702CA7181B00983594 /* SaveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveButton.swift; sourceTree = "<group>"; };
 		74CB4E722CA7187F00983594 /* ActionButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtonStyle.swift; sourceTree = "<group>"; };
+		74E53ABE2D38972C002FD8F6 /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 		74E684B22CA4DA5B00803277 /* SpeechPOC_macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeechPOC_macOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74E684B52CA4DA5B00803277 /* SpeechPOCApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechPOCApp.swift; sourceTree = "<group>"; };
 		74E684B72CA4DA5B00803277 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 		74CB4E742CA718AD00983594 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
+				74E53ABE2D38972C002FD8F6 /* BackButton.swift */,
 				744749E02CA5DDAA009F46C4 /* RecordingButtonView.swift */,
 				74CB4E702CA7181B00983594 /* SaveButton.swift */,
 			);
@@ -390,6 +393,7 @@
 				744749E32CA5DE31009F46C4 /* TranscribedTextView.swift in Sources */,
 				744749D82CA5B7F8009F46C4 /* CircularAudioVisualizerView.swift in Sources */,
 				74CB4E692CA7132D00983594 /* TranscriptionDetailView.swift in Sources */,
+				74E53ABF2D38972C002FD8F6 /* BackButton.swift in Sources */,
 				74CB4E6D2CA7137200983594 /* Transcription.swift in Sources */,
 				74CB4E6F2CA7139B00983594 /* TranscriptionViewModel.swift in Sources */,
 				744749DF2CA5DCDA009F46C4 /* InputDeviceInfoView.swift in Sources */,

@@ -93,17 +93,17 @@ struct ContentView: View {
         ZStack {
             CircularAudioVisualizerView(audioLevel: speechRecognizerViewModel.audioLevel, maxCircleSize: 80)
                 .frame(width: 150, height: 150)
-            
+
             RecordingButtonView(
-                isRecording: speechRecognizerViewModel.isRecording,
-                action: {
+                isRecording: $speechRecognizerViewModel.isRecording,
+                action: { onSuccess, onError in
                     speechRecognizerViewModel.toggleRecording()
                 }
             )
         }
         .frame(width: 250, height: 250)
     }
-    
+
     private func saveTranscription() {
         let newTranscription = Transcription(
             title: "Saved Transcription \(transcriptionViewModel.transcriptions.count + 1)",

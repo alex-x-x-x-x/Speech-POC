@@ -11,7 +11,7 @@ import AppKit
 @main
 struct SpeechPOCApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
-    
+
     var body: some Scene {
         WindowGroup {
             ContentView()
@@ -24,7 +24,7 @@ struct SpeechPOCApp: App {
 
 class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ notification: Notification) {
-        if let window = NSApplication.shared.windows.first {
+        guard let window = NSApplication.shared.windows.first else { return }
             let targetSize = NSSize(width: 800, height: 600)
             
             window.setContentSize(targetSize)
@@ -43,7 +43,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             window.center()
     
             window.level = .floating
-        }
     }
 }
 
